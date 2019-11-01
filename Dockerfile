@@ -9,13 +9,13 @@ FROM nginx:1.15-alpine
 
 
 # --
-# [start] node:10.9-alpine
+# [start] node:10.17-alpine
 #   from https://github.com/nodejs/docker-node/blob/72dd945d29dee5afa73956ebc971bf3a472442f7/10/alpine/Dockerfile
 # instead of using "FROM", we're copying the Dockerfile source here.
-# "FROM node:10.9-alpine"
+# "FROM node:10.17-alpine"
 # --
 
-ENV NODE_VERSION 10.9.0
+ENV NODE_VERSION 10.17.0
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
@@ -85,7 +85,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
 # CMD [ "node" ]
 
 # --
-# [end] node:10.9-alpine
+# [end] node:10.17-alpine
 # --
 
 
